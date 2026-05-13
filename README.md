@@ -1,10 +1,10 @@
-# Legendary JDK Migration Agent
+# JDK Migration Agent
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
-The **Legendary JDK Migration Agent** is a robust, enterprise-grade, self-healing system designed to automate the process of migrating Java codebases between JDK versions. It leverages advanced semantic code analysis and AI-driven quality assurance to transform cumbersome manual migrations into a seamless, autonomous pipeline.
+The **JDK Migration Agent** is a robust, enterprise-grade, self-healing system designed to automate the process of migrating Java codebases between JDK versions. It leverages advanced semantic code analysis and AI-driven quality assurance to transform cumbersome manual migrations into a seamless, autonomous pipeline.
 
 ## 🌟 Key Features
 
@@ -22,7 +22,7 @@ The agent provides a high-end, responsive web dashboard to visualize migration p
 
 ```text
 +-----------------------------------------------------------------------------+
-|  [Logo] Legendary JDK Migration Agent                  [Dashboard] [Docs]   |
+|  [Logo] JDK Migration Agent                            [Dashboard] [Docs]   |
 +-----------------------------------------------------------------------------+
 |                                                                             |
 |  +---------------------------+  +----------------------------------------+  |
@@ -88,7 +88,7 @@ mvn clean install
 
 ### Running the Agent
 
-You can run the agent directly via the terminal:
+You can run the agent directly via the terminal. Below is a comprehensive list of commands and flags available to users:
 
 ```bash
 # Basic usage targeting a specific project directory
@@ -99,6 +99,27 @@ java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project -
 
 # Dry run (Semantic Analysis only, no changes applied)
 java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --dry-run
+
+# Show all available commands and flags
+java -jar target/jdk-migration-agent.jar --help
+
+# Explicitly specify the source JDK (if it cannot be automatically detected)
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --source-jdk 8 --target-jdk 21
+
+# Create an automatic backup of the project directory before migrating
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --backup
+
+# Disable self-healing mechanics (fail fast on compilation errors)
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --no-self-healing
+
+# Run in verbose mode for detailed debugging logs
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --verbose
+
+# Target specific modules within a multi-module project
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --modules core,services
+
+# Generate a detailed migration report in a specific format (html, json, or text)
+java -jar target/jdk-migration-agent.jar --project-dir /path/to/legacy-project --target-jdk 21 --report-format html
 ```
 
 ### Viewing the Dashboard
