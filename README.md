@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
-The **JDK Migration Agent** is a robust, enterprise-grade, self-healing system designed to automate the process of migrating Java codebases between JDK versions. It leverages advanced semantic code analysis and AI-driven quality assurance to transform cumbersome manual migrations into a seamless, autonomous pipeline.
+The **Legendary JDK Migration Agent** is a robust, enterprise-grade, self-healing system designed to automate the process of migrating Java codebases between JDK versions. It leverages advanced semantic code analysis and AI-driven quality assurance to transform cumbersome manual migrations into a seamless, autonomous pipeline.
 
 ## 🌟 Key Features
 
